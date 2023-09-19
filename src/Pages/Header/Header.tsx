@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <HeaderContext.Provider value={{ showMenu, setShowMenu }}>
-      <header className="sticky top-0 flex justify-around flex-row w-full py-6">
+      <header className="sticky top-0 flex justify-around flex-row w-full py-6 bg-white z-30">
         <Logo />
         <Menu />
         <HeaderIcons />

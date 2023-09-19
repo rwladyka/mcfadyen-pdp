@@ -12,7 +12,7 @@ const editor = {
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="px-4 mb-[69px] lg:mb-[84px]">
       <Title text={editor.title} />
       <Quote text={editor.quote} />
       <EditorName name={editor.name} role={editor.role} />

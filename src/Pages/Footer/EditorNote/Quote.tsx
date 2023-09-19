@@ -4,7 +4,7 @@ type QuoteProps = {
 
 const Quote = ({ text }: QuoteProps) => {
   return (
-    <div className="text-center capitalize text-2xl lg:w-1/3 mx-auto">
+    <div className="text-center capitalize text-xl lg:text-2xl lg:w-1/3 mx-auto">
       {text}
     </div>
   );

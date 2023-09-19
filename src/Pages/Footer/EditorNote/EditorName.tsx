@@ -5,7 +5,7 @@ type EditorNameProps = {
 
 const EditorName = ({ name, role }: EditorNameProps) => {
   return (
-    <div className="flex justify-center my-4">
+    <div className="flex justify-center my-4 text-sm">
       <div className="w-7 h-px bg-black my-auto mr-2" />
       <div>
         By <span className="uppercase underline">{name}</span>,&nbsp;

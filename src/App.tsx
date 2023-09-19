@@ -1,13 +1,13 @@
 import './App.css';
 import { Footer } from './Pages/Footer';
 import { Header } from './Pages/Header';
-import { ProductBody } from './Pages/ProductPage';
+import ProductPage from './Pages/ProductPage';
 
 function App() {
   return (
     <>
       <Header />
-      <ProductBody />
+      <ProductPage />
       <Footer />
     </>
   );
