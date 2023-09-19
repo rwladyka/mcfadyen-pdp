@@ -7,12 +7,12 @@ import { Icons } from '../../../components/Icons';
 
 const ProductImages = () => {
   return (
-    <div className="lg:w-2/3 flex flex-col gap-2 relative">
+    <div className="lg:w-2/4 flex flex-col gap-2 relative">
       <div className="w-full lg:product-sticky right-0">
         <img
           src={Icons.Heart}
           alt="like it"
-          className="w-[25px] h-[25px] absolute top-[10px] right-6 cursor-pointer"
+          className="w-[25px] h-[25px] absolute top-[10px] right-6 cursor-pointer z-20"
         />
       </div>
       <img src={Image1} alt="Product 1" />

@@ -7,7 +7,7 @@ const HeaderIcons = () => {
   const { showMenu, setShowMenu } = useContext(HeaderContext);
 
   return (
-    <div className="flex justify-center gap-x-3 1/2 lg:w-1/6 px-3">
+    <div className="flex justify-center gap-x-3 1/2 lg:w-1/6 px-3 z-30">
       <IconButton>
         <span className="flex justify-center text-xs absolute w-full h-full">
           0

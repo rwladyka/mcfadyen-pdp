@@ -22,3 +22,7 @@
     display: block;
   }
 }
+
+.slick-active > div {
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
