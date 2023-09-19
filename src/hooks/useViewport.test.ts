@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
-import { useViewport } from './useViewports';
+import { useViewport } from './useViewport';
 
 describe('useViewport hook', () => {
   it('initializes deviceSize based on window.innerWidth', () => {

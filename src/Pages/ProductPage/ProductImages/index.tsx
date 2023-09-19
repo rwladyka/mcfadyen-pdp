@@ -1,4 +1,4 @@
-import { useViewport } from '../../../hooks/useViewports';
+import { useViewport } from '../../../hooks/useViewport';
 import ProductImagesDesktop from './ProductImagesDesktop';
 import ProductSlick from './ProductSlick';
 
