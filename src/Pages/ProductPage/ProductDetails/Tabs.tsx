@@ -1,22 +1,25 @@
-const TabTitles = ['Details', 'Delivery', 'Fit', 'Share'];
+import { PRODUCT_DETAILS } from '../../../constraints';
+import { ProductDetail } from '../../../types';
 
 type TabsProps = {
-  selected: string;
+  selected: ProductDetail;
+  onSelectTab: (detail: ProductDetail) => void;
 };
 
-const Tabs = ({ selected }: TabsProps) => {
+const Tabs = ({ selected, onSelectTab }: TabsProps) => {
   return (
     <ul className="flex justify-between mb-1">
-      {TabTitles.map((title) => (
+      {PRODUCT_DETAILS.map((detail) => (
         <li
-          key={title}
-          className={`uppercase ${
-            selected === title
+          key={detail.title}
+          onClick={() => onSelectTab(detail)}
+          className={`uppercase cursor-pointer ${
+            selected.title === detail.title
               ? 'text-black font-bold underline'
               : 'text-darkGrey'
           }`}
         >
-          {title}
+          {detail.title}
         </li>
       ))}
     </ul>
