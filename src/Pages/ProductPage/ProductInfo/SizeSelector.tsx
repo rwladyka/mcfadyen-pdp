@@ -23,7 +23,7 @@ const SizeSelector = () => {
       <div className="flex justify-between mb-3">
         <div className="uppercase">
           <span className="font-bold">Size </span>
-          <span>{selectedSize}</span>
+          <span data-testid="selected-size">{selectedSize}</span>
         </div>
         <div className="uppercase underline">Size guide</div>
       </div>
@@ -36,9 +36,13 @@ const SizeSelector = () => {
               size
             )}`}
             onClick={() => dispatch(updateProductSize(size.label))}
+            data-testid={`btn-select-size-${size.label}`}
           >
             {!size.stock && (
-              <span className="w-7 h-px bg-grey mt-[11px] origin-center rotate-15 absolute ml-[-7px] -rotate-12" />
+              <span
+                className="w-7 h-px bg-grey mt-[11px] origin-center rotate-15 absolute ml-[-7px] -rotate-12"
+                data-testid={`strike-size-oos-${size.label}`}
+              />
             )}
             {size.label}
           </button>
