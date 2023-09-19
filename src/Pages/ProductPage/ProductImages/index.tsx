@@ -1,9 +1,9 @@
-import { useViewPort } from '../../../hooks/useViewPort';
+import { useViewport } from '../../../hooks/useViewports';
 import ProductImagesDesktop from './ProductImagesDesktop';
 import ProductSlick from './ProductSlick';
 
 const ProductImages = () => {
-  const { isMobile } = useViewPort();
+  const { isMobile } = useViewport();
   return (
     <>
       {!isMobile && <ProductImagesDesktop />}

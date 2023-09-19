@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const useViewPort = () => {
+const useViewport = () => {
   const [deviceSize, setDeviceSize] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -18,4 +18,4 @@ const useViewPort = () => {
   };
 };
 
-export { useViewPort };
+export { useViewport };
