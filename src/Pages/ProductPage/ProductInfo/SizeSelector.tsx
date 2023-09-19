@@ -1,20 +1,14 @@
-import { useState } from 'react';
-
-const SIZES: Size[] = [
-  { label: 'XS', stock: 1 },
-  { label: 'S', stock: 1 },
-  { label: 'M', stock: 0 },
-  { label: 'L', stock: 1 },
-  { label: 'XXL', stock: 1 },
-];
-
-type Size = {
-  label: string;
-  stock: number;
-};
+import { useDispatch, useSelector } from 'react-redux';
+import { updateProductSize } from '../../../redux/actions';
+import { Size } from '../../../types';
+import { SIZES } from '../../../constraints';
+import { Dispatch } from 'redux';
 
 const SizeSelector = () => {
-  const [selectedSize, setSelectedSize] = useState('');
+  const selectedSize = useSelector(
+    (state: { productSelectedSize: string }) => state.productSelectedSize
+  );
+  const dispatch: Dispatch<any> = useDispatch();
 
   const getSizeColor = (size: Size) => {
     if (!size.stock) return 'text-grey';
@@ -41,7 +35,7 @@ const SizeSelector = () => {
             className={`border border-lightGrey py-2 w-[78px] rounded-[100px] mb-[6px] ${getSizeColor(
               size
             )}`}
-            onClick={() => setSelectedSize(size.label)}
+            onClick={() => dispatch(updateProductSize(size.label))}
           >
             {!size.stock && (
               <span className="w-7 h-px bg-grey mt-[11px] origin-center rotate-15 absolute ml-[-7px] -rotate-12" />
